@@ -1,0 +1,27 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "cmake",
+            "type": "shell",
+            "command": "cmake CMAKE_CXX_FLAGS='-std=c++14' myTrace2019/CMakeLists.txt",
+            "group": "build"
+        },
+        {
+            "label": "make",
+            "type": "shell",
+            "command": "cd myTrace2019;make",
+            "group": "build",
+            "problemMatcher": []
+        },
+        {
+            "label": "Debug debug-ray-make",
+            "type": "shell",
+            "command": "cd debug-ray;make Debug",
+            "group": "build",
+            "problemMatcher": []
+        }
+    ]
+}
